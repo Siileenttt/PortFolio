@@ -1,0 +1,42 @@
+<section id="education" class="section" aria-labelledby="education-title">
+    <SectionHeading Id="education" Title="Education" />
+
+    <ol class="edu-list">
+        @foreach (var e in Items)
+        {
+            <li class="edu-item">
+                <p class="timeline-dates">
+                    <span>@e.Start</span>
+                    <span class="timeline-to">to @e.End</span>
+                </p>
+                <div>
+                    <h3>@e.Degree</h3>
+                    <p class="org">
+                        <span class="org-name">@e.Institution</span>
+                        @if (!string.IsNullOrWhiteSpace(e.Location))
+                        {
+                            <span class="org-place">, @e.Location</span>
+                        }
+                    </p>
+                    @if (!string.IsNullOrWhiteSpace(e.Grade))
+                    {
+                        <p class="grade">@e.Grade</p>
+                    }
+                    @if (e.Notes.Count > 0)
+                    {
+                        <ul class="highlights">
+                            @foreach (var n in e.Notes)
+                            {
+                                <li>@n</li>
+                            }
+                        </ul>
+                    }
+                </div>
+            </li>
+        }
+    </ol>
+</section>
+
+@code {
+    [Parameter, EditorRequired] public List<Education> Items { get; set; } = new();
+}

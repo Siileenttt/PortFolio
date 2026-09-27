@@ -1,0 +1,22 @@
+<section id="skills" class="section" aria-labelledby="skills-title">
+    <SectionHeading Id="skills" Title="Technical skills" />
+
+    <div class="skill-table">
+        @foreach (var group in Groups)
+        {
+            <div class="skill-row">
+                <h3>@group.Category</h3>
+                <ul class="tags">
+                    @foreach (var item in group.Items)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+</section>
+
+@code {
+    [Parameter, EditorRequired] public List<SkillGroup> Groups { get; set; } = new();
+}

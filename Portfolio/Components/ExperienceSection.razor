@@ -1,0 +1,47 @@
+<section id="experience" class="section" aria-labelledby="experience-title">
+    <SectionHeading Id="experience" Title="Work experience" Note="Most recent first." />
+
+    <ol class="timeline">
+        @foreach (var job in Jobs)
+        {
+            <li class="timeline-item">
+                <p class="timeline-dates">
+                    <span>@job.Start</span>
+                    <span class="timeline-to">to @job.End</span>
+                </p>
+                <div class="timeline-body">
+                    <h3>@job.Role</h3>
+                    <p class="org">
+                        <span class="org-name">@job.Company</span>
+                        @if (!string.IsNullOrWhiteSpace(job.Location))
+                        {
+                            <span class="org-place">, @job.Location</span>
+                        }
+                    </p>
+                    @if (job.Highlights.Count > 0)
+                    {
+                        <ul class="highlights">
+                            @foreach (var h in job.Highlights)
+                            {
+                                <li>@h</li>
+                            }
+                        </ul>
+                    }
+                    @if (job.Tech.Count > 0)
+                    {
+                        <ul class="tags tags-quiet" aria-label="Technologies used">
+                            @foreach (var t in job.Tech)
+                            {
+                                <li>@t</li>
+                            }
+                        </ul>
+                    }
+                </div>
+            </li>
+        }
+    </ol>
+</section>
+
+@code {
+    [Parameter, EditorRequired] public List<Job> Jobs { get; set; } = new();
+}

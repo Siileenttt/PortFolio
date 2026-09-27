@@ -1,0 +1,22 @@
+<section id="summary" class="section" aria-labelledby="summary-title">
+    <SectionHeading Id="summary" Title="Professional summary" />
+
+    <p class="summary-text">@Summary.Text</p>
+
+    @if (Summary.Highlights.Count > 0)
+    {
+        <dl class="facts">
+            @foreach (var h in Summary.Highlights)
+            {
+                <div class="fact">
+                    <dt>@h.Label</dt>
+                    <dd>@h.Value</dd>
+                </div>
+            }
+        </dl>
+    }
+</section>
+
+@code {
+    [Parameter, EditorRequired] public Summary Summary { get; set; } = new();
+}

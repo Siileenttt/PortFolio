@@ -1,0 +1,62 @@
+@page "/"
+@inject PortfolioService Portfolio
+@inject IJSRuntime JS
+
+<PageTitle>@(data is null ? "Portfolio" : $"{data.Profile.Name} | {data.Profile.Title}")</PageTitle>
+
+@if (error is not null)
+{
+    <div class="state-message">
+        <h1>The portfolio content didn't load.</h1>
+        <p>@error</p>
+        <p>Check that <code>wwwroot/data/portfolio.json</code> exists and is valid JSON, then reload.</p>
+    </div>
+}
+else if (data is null)
+{
+    <div class="state-message"><p>Loading portfolio…</p></div>
+}
+else
+{
+    <div class="shell">
+        <Sidebar Profile="data.Profile" />
+
+        <main class="content">
+            <AboutSection Profile="data.Profile" Paragraphs="data.About" />
+            <SummarySection Summary="data.Summary" />
+            <SkillsSection Groups="data.Skills" />
+            <ExperienceSection Jobs="data.Experience" />
+            <ProjectsSection Projects="data.Projects" />
+            <EducationSection Items="data.Education" />
+            <SiteFooter Profile="data.Profile" />
+        </main>
+    </div>
+}
+
+@code {
+    private PortfolioData? data;
+    private string? error;
+    private bool scriptsReady;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            data = await Portfolio.GetAsync();
+        }
+        catch (Exception ex)
+        {
+            error = ex.Message;
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // Wire up smooth scrolling + active-section highlighting once the content exists.
+        if (data is not null && !scriptsReady)
+        {
+            scriptsReady = true;
+            await JS.InvokeVoidAsync("portfolio.init");
+        }
+    }
+}

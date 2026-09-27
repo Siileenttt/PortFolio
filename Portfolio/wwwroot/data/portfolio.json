@@ -1,0 +1,297 @@
+{
+  "profile": {
+    "name": "Prasanna Kharche",
+    "title": "Full-Stack .NET Developer, C/C++",
+    "tagline": "I build fast, dependable web apps with ASP.NET Core/framework.",
+    "location": "Maharastra, INDIA",
+    "email": "Prasannapk17@gmail.com",
+    "phone": "+91 88283 23003",
+    "linkedIn": "https://www.linkedin.com/in/prasanna-kharche-8283263b2/",
+    "gitHub": "https://github.com/Siileenttt",
+    "resumeUrl": "Resume.pdf",
+    "openToWork": true
+  },
+
+  "about": [
+    "Senior Software Engineer with 5+ years of experience designing and delivering secure, scalable web applications and microservices using Angular, ASP.NET/C#, and Azure.",
+    "Proven track record modernizing legacy systems, architecting high throughput REST APIs, and implementing enterprise security controls (Azure Entra ID, MFA, SSO, API-Gateway rate limiting).",
+    "Skilled in full-stack development, CI/CD (Azure Pipelines), containerization (Docker,Kubernetes), and cross functional delivery."
+  ],
+
+  "summary": {
+    "text": "Full-stack .NET developer with 4+ years of experience designing, building and deploying web applications and REST APIs. Comfortable across the stack, from database design and query tuning to responsive UI, with hands-on experience in cloud deployment, CI/CD and agile delivery.",
+    "highlights": [
+      {
+        "value": "4+ years",
+        "label": "Professional production experience"
+      },
+      {
+        "value": "2+",
+        "label": "Projects delivered"
+      },
+      {
+        "value": "40%",
+        "label": "Faster API responses after my last optimisation"
+      },
+      {
+        "value": "AZ-900",
+        "label": "Azure certified"
+      }
+    ]
+  },
+
+ 
+   "skills": [
+      {
+        "category": "Languages & Frameworks",
+        "items": [
+          "C#",
+          "TypeScript",
+          "JavaScript",
+          "Angular (v20)",
+          "Blazor",
+          "ASP.NET",
+          ".NET MAUI",
+          "jQuery",
+          "Ajax",
+          "Node.js"
+        ]
+      },
+      {
+        "category": "Data & APIs",
+        "items": [
+          "MSSQL",
+          "MongoDB",
+          "LINQ",
+          "Entity Framework",
+          "ADO.NET",
+          "REST API Design"
+        ]
+      },
+      {
+        "category": "Cloud & DevOps",
+        "items": [
+          "Azure",
+          "Docker",
+          "Kubernetes",
+          "Azure Pipelines (CI/CD)",
+          "Azure Service Bus"
+        ]
+      },
+      {
+        "category": "Security",
+        "items": [
+          "Azure Entra ID",
+          "Multi-Factor Authentication (MFA)",
+          "SSO",
+          "API-Gateway Rate Limiting",
+          "DDoS Mitigation"
+        ]
+      },
+      {
+        "category": "Other",
+        "items": [
+          "PowerShell",
+          "Bash",
+          "XML",
+          "XAML",
+          "JSON",
+          "YAML",
+          "System Design",
+          "Design Patterns",
+          "Microsoft Agent Framework"
+        ]
+      },
+      {
+        "category": "Certifications",
+        "items": [
+          "Microsoft AZ-900",
+          "TCS AI Path (L1, L2, L3)"
+        ]
+      }
+    ],
+  
+
+
+  "experience": [
+    {
+      "role": "Senior Software Engineer",
+      "company": "Clover Infotech",
+      "location": "Andheri",
+      "start": "Aug 2026",
+      "end": "Present",
+      "highlights": [
+        "Serve as the sole point of contact for the complete Clover corporate website, leading its migration from a legacy WebForms architecture to a microservices-based platform.",
+        "Preserved the existing UI/UX while re-engineering backend functionality, minimizing user disruption during migration.",
+        "Built the UI using Angular 20 and backend services using ASP.NET and C# 10 with SQL Server.",
+        "Implemented CI/CD pipelines using Azure Pipelines."
+      ],
+      "tech": [
+        "C# 10",
+        "ASP.NET",
+        "Angular 20",
+        "SQL Server",
+        "Microservices",
+        "Azure Pipelines",
+        "CI/CD",
+        "ASP.NET Web Forms"
+      ]
+    },
+    {
+      "role": "System Engineer",
+      "company": "Tata Consultancy Services",
+      "location": "Thane",
+      "start": "Mar 2022",
+      "end": "Aug 2026",
+      "highlights": [
+        "Architected high-throughput, secure platforms and engineered scalable REST APIs combining synchronous workflows with asynchronous processing via Azure Service Bus to support distributed microservices and event-driven data streams.",
+        "Strengthened platform security by implementing Azure Entra ID for Multi-Factor Authentication (MFA) and Single Sign-On (SSO).",
+        "Improved infrastructure resilience by deploying API-Gateway rate limiting and enterprise bot protection, reducing credential stuffing, DDoS, and fraudulent traffic."
+      ],
+      "tech": [
+        "C#",
+        ".NET",
+        "REST APIs",
+        "Microservices",
+        "Azure Service Bus",
+        "Azure Entra ID",
+        "MFA",
+        "SSO",
+        "API Gateway",
+        "Rate Limiting",
+        "DDoS Mitigation"
+      ]
+    },
+    {
+      "role": "Sales Engineer",
+      "company": "Talin Machinery",
+      "location": "Noida",
+      "start": "Sep 2021",
+      "end": "Mar 2022",
+      "highlights": [
+        "Achieved monthly sales of ₹13 lakh selling drillers, cutters, and pneumatic machines, consistently meeting assigned revenue targets.",
+        "Recognized for exceptional customer service, contributing to a measurable increase in client retention."
+      ],
+      "tech": []
+    },
+    {
+      "role": "Assistant Engineer",
+      "company": "Crane.CO",
+      "location": "Satara",
+      "start": "Jun 2019",
+      "end": "Jan 2020",
+      "highlights": [
+        "Assisted in developing quality control measures that reduced production errors by 99% (Bell Curve, σ3), improving product quality and customer satisfaction.",
+        "Contributed to quality assurance initiatives that reduced product defects and enhanced brand reputation."
+      ],
+      "tech": []
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "Automation in Disk Increment",
+      "year": "2024",
+      "role": "Developer",
+      "description": "Automated server disk capacity management to simplify disk space expansion and reduce manual administrative effort.",
+      "tech": [],
+      "sourceUrl": "",
+      "liveUrl": "",
+      "featured": false
+    },
+    {
+      "name": "Server Upgrade Automation",
+      "year": "2024",
+      "role": "Developer",
+      "description": "Automated the end-to-end server upgrade process, reducing manual steps and improving consistency across server upgrades.",
+      "tech": [],
+      "sourceUrl": "",
+      "liveUrl": "",
+      "featured": false
+    },
+    {
+      "name": "On-Call Report Automation",
+      "year": "2024",
+      "role": "Developer",
+      "description": "Built automated reporting for on-call operations to streamline report generation and improve operational visibility.",
+      "tech": [],
+      "sourceUrl": "",
+      "liveUrl": "",
+      "featured": false
+    },
+    {
+      "name": "Full-Stack Workshop System",
+      "year": "2025",
+      "role": "Developer",
+      "description": "Developed a full-stack website and mobile application for workshop management, covering business operations and workflow management.",
+      "tech": [
+        "C#",
+        ".NET",
+        "ASP.NET",
+        "SQL Server",
+        ".NET MAUI"
+      ],
+      "sourceUrl": "",
+      "liveUrl": "",
+      "featured": true
+    },
+    {
+      "name": "2D/3D Game Development",
+      "year": "2025",
+      "role": "Developer",
+      "description": "Developed 2D and 3D games using Unity, gaining hands-on experience with game development, gameplay systems, and 3D environments.",
+      "tech": [
+        "Unity",
+        "C#",
+        "2D Game Development",
+        "3D Game Development"
+      ],
+      "sourceUrl": "",
+      "liveUrl": "",
+      "featured": false
+    },
+    {
+      "name": "C Projects",
+      "year": "2026",
+      "role": "Developer",
+      "description": "Developed systems-level programming projects in C, focusing on low-level programming concepts, memory management, and system programming.",
+      "tech": [
+        "C",
+        "Systems Programming"
+      ],
+      "sourceUrl": "",
+      "liveUrl": "",
+      "featured": false
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "B.Tech. in Mechanical Engineering",
+      "institution": "Walchand College of Engineering, Shivaji University",
+      "location": "",
+      "start": "",
+      "end": "2019",
+      "grade": "",
+      "notes": []
+    },
+    {
+      "degree": "Diploma in Mechanical Engineering",
+      "institution": "Government Polytechnic Amravati, Amravati University",
+      "location": "Amravati",
+      "start": "",
+      "end": "2016",
+      "grade": "",
+      "notes": []
+    },
+    {
+      "degree": "M.Sc. in Advanced Mathematics",
+      "institution": "Manipal University",
+      "location": "",
+      "start": "",
+      "end": "Pursuing",
+      "grade": "",
+      "notes": []
+    }
+  ]
+}

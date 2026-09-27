@@ -1,0 +1,22 @@
+<section id="about" class="section section-about" aria-labelledby="about-title">
+    <h2 id="about-title" class="visually-hidden">About</h2>
+
+    <p class="statement">@Profile.Tagline</p>
+
+    <div class="about-body">
+        @foreach (var paragraph in Paragraphs)
+        {
+            <p>@paragraph</p>
+        }
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(Profile.Location))
+    {
+        <p class="location">Based in @Profile.Location</p>
+    }
+</section>
+
+@code {
+    [Parameter, EditorRequired] public Profile Profile { get; set; } = new();
+    [Parameter, EditorRequired] public List<string> Paragraphs { get; set; } = new();
+}

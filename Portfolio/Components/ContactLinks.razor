@@ -1,0 +1,24 @@
+<ul class="contact-links">
+    @if (!string.IsNullOrWhiteSpace(Profile.Email))
+    {
+        <li><a href="mailto:@Profile.Email">@Profile.Email</a></li>
+    }
+    @if (!string.IsNullOrWhiteSpace(Profile.Phone))
+    {
+        <li><a href="@PhoneHref">@Profile.Phone</a></li>
+    }
+    @if (!string.IsNullOrWhiteSpace(Profile.LinkedIn))
+    {
+        <li><a href="@Profile.LinkedIn" target="_blank" rel="noopener">LinkedIn</a></li>
+    }
+    @if (!string.IsNullOrWhiteSpace(Profile.GitHub))
+    {
+        <li><a href="@Profile.GitHub" target="_blank" rel="noopener">GitHub</a></li>
+    }
+</ul>
+
+@code {
+    [Parameter, EditorRequired] public Profile Profile { get; set; } = new();
+
+    private string PhoneHref => "tel:" + Profile.Phone.Replace(" ", "");
+}

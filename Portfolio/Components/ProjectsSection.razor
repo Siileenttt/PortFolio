@@ -1,0 +1,45 @@
+<section id="projects" class="section" aria-labelledby="projects-title">
+    <SectionHeading Id="projects" Title="Projects" />
+
+    <div class="project-grid">
+        @foreach (var p in Projects)
+        {
+            <article class="project @(p.Featured ? "project-featured" : "")">
+                <h3>@p.Name</h3>
+                @if (!string.IsNullOrWhiteSpace(p.Role))
+                {
+                    <p class="project-role">@p.Role</p>
+                }
+                <p class="project-desc">@p.Description</p>
+
+                @if (p.Tech.Count > 0)
+                {
+                    <ul class="tags tags-quiet" aria-label="Built with">
+                        @foreach (var t in p.Tech)
+                        {
+                            <li>@t</li>
+                        }
+                    </ul>
+                }
+
+                @if (!string.IsNullOrWhiteSpace(p.SourceUrl) || !string.IsNullOrWhiteSpace(p.LiveUrl))
+                {
+                    <p class="project-links">
+                        @if (!string.IsNullOrWhiteSpace(p.LiveUrl))
+                        {
+                            <a href="@p.LiveUrl" target="_blank" rel="noopener">Open live site</a>
+                        }
+                        @if (!string.IsNullOrWhiteSpace(p.SourceUrl))
+                        {
+                            <a href="@p.SourceUrl" target="_blank" rel="noopener">View source</a>
+                        }
+                    </p>
+                }
+            </article>
+        }
+    </div>
+</section>
+
+@code {
+    [Parameter, EditorRequired] public List<Project> Projects { get; set; } = new();
+}

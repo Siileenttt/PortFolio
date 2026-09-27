@@ -1,0 +1,13 @@
+<header class="section-heading">
+    <h2 id="@(Id)-title">@Title</h2>
+    @if (!string.IsNullOrWhiteSpace(Note))
+    {
+        <p>@Note</p>
+    }
+</header>
+
+@code {
+    [Parameter, EditorRequired] public string Id { get; set; } = "";
+    [Parameter, EditorRequired] public string Title { get; set; } = "";
+    [Parameter] public string? Note { get; set; }
+}

@@ -1,0 +1,43 @@
+<aside class="sidebar">
+    <div class="sidebar-inner">
+        <div class="identity">
+            <p class="name">@Profile.Name</p>
+            <p class="role">@Profile.Title</p>
+            @if (Profile.OpenToWork)
+            {
+                <p class="status"><span class="status-dot" aria-hidden="true"></span>Open to new roles</p>
+            }
+        </div>
+
+        <nav class="section-nav" aria-label="Page sections">
+            <ul>
+                @foreach (var (id, label) in Sections)
+                {
+                    <li><button type="button" data-scroll="@id">@label</button></li>
+                }
+            </ul>
+        </nav>
+
+        <div class="sidebar-contact">
+            <ContactLinks Profile="Profile" />
+            @if (!string.IsNullOrWhiteSpace(Profile.ResumeUrl))
+            {
+                <a class="button" href="@Profile.ResumeUrl" download>Download résumé</a>
+            }
+        </div>
+    </div>
+</aside>
+
+@code {
+    [Parameter, EditorRequired] public Profile Profile { get; set; } = new();
+
+    private static readonly (string Id, string Label)[] Sections =
+    {
+        ("about", "About"),
+        ("summary", "Professional summary"),
+        ("skills", "Technical skills"),
+        ("experience", "Work experience"),
+        ("projects", "Projects"),
+        ("education", "Education"),
+    };
+}

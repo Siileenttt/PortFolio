@@ -1,0 +1,15 @@
+<footer class="site-footer">
+    <div class="footer-cta">
+        <p class="footer-title">Let's work together.</p>
+        <p>The fastest way to reach me is email or call me. I usually reply within a day.</p>
+        <ContactLinks Profile="Profile" />
+    </div>
+    <div class="footer-meta">
+        <p>&copy; @DateTime.Now.Year @Profile.Name.</p>
+        <button type="button" class="link-button" data-scroll="about">Back to top</button>
+    </div>
+</footer>
+
+@code {
+    [Parameter, EditorRequired] public Profile Profile { get; set; } = new();
+}
